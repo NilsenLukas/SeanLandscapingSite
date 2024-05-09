@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif; 
+    min-height: 100vh; 
+    --color-primary: #b9dddd;
+    --color-secondary: #77a535;
+    --color-outline: #041f27;
+    --color-primary-dark: #1f8db3;
+    --color-secondary-light: #b0ca30;
+    --color-outline-light: #53625b;
+}
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.contentContactUs {
+    padding-top: 20px;
+    color: var(--color-outline);
+    /* background-color: var(--color-primary-dark); */
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical; 
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: var(--color-outline-light); 
+    color: white; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; 
+    margin: 16px 0; 
+}
+
+form button:hover {
+    background-color: var(--color-primary-dark); 
+}
+
+.container {
+    border-radius: 5px; 
+    background-color: #f2f2f2; 
+    padding: 20px; 
+    margin: 25px auto; 
+    max-width: 600px; 
+    
+}
+.headerCF {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding-right: 2em;
+    font-weight: bold;
+}
+
+.field .item::placeholder {
+    color: var(--color-outline-light);
+}
+
+.field .error-txt {
+    font-size: 14.5px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+.field.error .error-txt{
+    display: block;
+}
+
+form .textarea-field.item {
+    resize: none;
+}
+
+form .textarea-field .error-txt {
+    margin-top: -10px;
+}
+
+@media screen and (max-width: 600px) {
+    input[type="text"],
+    select,
+    textarea {
+    width: 100%;
+    margin: 6px 0 16px;
+}
+.container {
+    margin: 5px 5%;
+}
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="About.css" />
+    <link rel="stylesheet" href="../Nav/Navbar.css" />
+    <title>About Us Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="body">
+      <header>
+        <div id="header"></div>
+      </header>
+
+      <div class="AboutSeanContent">
+        <div class="SeanAbout">
+          <h2>Welcome!</h2>
+          <p class="SeanTextAbout">
+            I'm a dedicated college athlete with a passion for enhancing outdoor
+            spaces in my hometown of Lake Orion, Michigan. With two years of
+            professional experience in landscaping, I specialize in mulching,
+            bringing precision and care to each project to ensure outstanding
+            results. My athletic discipline translates into my landscaping work,
+            where I apply the same commitment and attention to detail.
+            <br /><br />
+            Whether it's revitalizing your garden beds with high-quality mulch
+            or tackling a variety of other landscaping needs, I'm here to help.
+            My goal is to transform your outdoor areas into beautiful,
+            functional spaces that you can enjoy with family and friends. I take
+            pride in my work and am always ready to adapt and meet the unique
+            demands of each task. <br /><br />
+            Let's make your landscaping vision a reality. Reach out today to
+            discuss how we can enhance your property together!
+          </p>
+        </div>
+        <div class="SeanPhoto">
+          <img
+            class="SeanLinkPhoto"
+            src="../Images/SeanPhoto.jpeg"
+            alt="Picture of me"
+          />
+        </div>
+      </div>
+
+      <div class="photo-section">
+        <h2>Before and After</h2>
+        <div class="photo-container">
+          <img src="../Images/Before1.jpeg" alt="Before" class="photo" />
+          <img src="../Images/After1.jpeg" alt="After" class="photo" />
+        </div>
+
+        <h2>Mulching</h2>
+        <div class="photo-container">
+          <img
+            src="../Images/Mulch1.jpeg"
+            alt="Mulching Before"
+            class="photo"
+          />
+          <img src="../Images/Mulch2.jpeg" alt="Mulching After" class="photo" />
+        </div>
+
+        <h2>Weeding</h2>
+        <div class="photo-container">
+          <img
+            src="../Images/Weeding1.jpeg"
+            alt="Weeding Before"
+            class="photo"
+          />
+          <img
+            src="../Images/Weeding2.jpeg"
+            alt="Weeding After"
+            class="photo"
+          />
+          <img src="../Images/Pond1.jpeg" alt="Weeding After" class="photo" />
+          <img src="../Images/Pond2.jpeg" alt="Weeding After" class="photo" />
+        </div>
+      </div>
+
+      <footer>
+        <div id="FooterContent">
+          <h3 class="FooterContactMe">
+            Feel free to reach out through the
+            <a href="../Contact/Contact.html" class="navlink">contact me</a>
+            page or my moble number (248-568-6940)
+          </h3>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      $(function () {
+        $("#header").load("../Nav/NavBar.html .header"); // Load the header content
+        // $("#footer").load("../Nav/NavBar.html .footer"); // Load the footer content
+      });
+    </script>
+  </body>
+</html>
