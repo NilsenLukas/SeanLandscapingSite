@@ -124,6 +124,6 @@
     }
     .SeanAbout{
         justify-content: center;
-        flex: 1 1 100%;
+        flex: none;
     }
 } 
