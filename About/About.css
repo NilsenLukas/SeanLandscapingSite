@@ -127,4 +127,9 @@
         flex: none;
         max-width: 100%;
     }
+    .AboutSeanContent{
+        justify-content: center;
+        text-align: center;
+        min-width: 200px;
+    }
 } 
