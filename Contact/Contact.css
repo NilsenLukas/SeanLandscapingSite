@@ -56,7 +56,7 @@ form button:hover {
     padding: 20px; 
     margin: 25px auto; 
     max-width: 600px; 
-    
+    min-width: 350px;  
 }
 .headerCF {
     text-align: center;

@@ -1,103 +1,91 @@
 const form = document.querySelector("form");
-const firstN = document.getElementById("fname");
-const lastN = document.getElementById("lname");
+const Name = document.getElementById("name");
 const email = document.getElementById("email");
-const subject = document.getElementById("subject");
-const message = document.getElementById("message");
+const Phone = document.getElementById("phone");
+const Address = document.getElementById("address");
+const Description = document.getElementById("description");
+const Mulch = document.getElementById("mulch");
 
-function sendEmail(){
-    const bodyMessage = `Full Name: ${firstN.value} ${lastN.value}<br>
+function sendEmail() {
+    const bodyMessage = `Name: ${Name.value}<br>
     Email: ${email.value} <br>
-    Message: ${message.value}`;
+    Phone Number: ${Phone.value} <br>
+    Address: ${Address.value} <br>
+    Job description: ${Description.value} <br>
+    Mulch amount: ${Mulch.value}`;
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "Lagt123456@gmail.com",
-        Password : "AAFE1126720711413AED86CDE6C35F972545",
-        To : 'Lagt123456@gmail.com',
-        From : "lagt123456@gmail.com",
-        Subject : subject.value,
-        Body : bodyMessage
+        Host: "smtp.elasticemail.com",
+        Username: "Henieslandco@gmail.com",
+        Password: "F4B91485770C3728A549C857FFC64235805B",
+        To: 'Henieslandco@gmail.com',
+        From: "Henieslandco@gmail.com",
+        Subject: `${Name.value} - ${Address.value}`,
+        Body: bodyMessage
     }).then(
         message => {
-            if (message == "OK"){
+            if (message === "OK") {
                 Swal.fire({
-                    title: "Thank you for youre feedback",
+                    title: "Thank you for your message",
                     text: "Your message has been sent!",
                     icon: "success"
-                });  
+                });
             }
         }
     );
 }
 
-function checkError(){
+function checkError() {
     const items = document.querySelectorAll(".item");
-    
-    for (const item of items){
-        if (item.value == ""){
+
+    for (const item of items) {
+        if (item.value === "") {
             item.classList.add("error");
             item.parentElement.classList.add("error");
-            //console.log("1");
         }
 
-        if (items[2].value != ""){
+        if (items[1].value !== "") {
             checkEmail();
-            //console.log("2");
         }
-        items[2].addEventListener("keyup", () => {
+        items[1].addEventListener("keyup", () => {
             checkEmail();
-            //console.log("3");
         });
 
         item.addEventListener("keyup", () => {
-            if (item.value != ""){
+            if (item.value !== "") {
                 item.classList.remove("error");
                 item.parentElement.classList.remove("error");
-                //console.log("4");
-            }
-            else{
+            } else {
                 item.classList.add("error");
                 item.parentElement.classList.add("error");
-                //console.log("5");
             }
         });
     }
 }
 
-function checkEmail(){
+function checkEmail() {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
     const errorTxtEmail = document.querySelector(".error-txt.email");
 
-    if (!email.value.match(emailRegex)){
+    if (!email.value.match(emailRegex)) {
         email.classList.add("error");
         email.parentElement.classList.add("error");
-        //console.log("6");
 
-        if (email.value != ""){
+        if (email.value !== "") {
             errorTxtEmail.innerText = "Enter a valid email address";
-            //console.log("9");
-        }
-        else{
+        } else {
             errorTxtEmail.innerText = "Email address can't be blank";
-            //console.log("10");
         }
-    }
-    else{
+    } else {
         email.classList.remove("error");
         email.parentElement.classList.remove("error");
-        //console.log("7");
     }
 }
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    //console.log('testing');
     checkError();
 
-    if (!firstN.classList.contains("error") && !lastN.classList.contains("error") && !email.classList.contains("error") && !subject.classList.contains("error") &&!firstN.classList.contains("error") &&!firstN.classList.contains("error") && !message.classList.contains("error")){
+    if (!Name.classList.contains("error") && !Phone.classList.contains("error") && !Address.classList.contains("error") && !Description.classList.contains("error") && !Mulch.classList.contains("error") && !email.classList.contains("error")) {
         sendEmail();
     }
-    //console.log('testing1');
 });
-

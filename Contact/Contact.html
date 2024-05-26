@@ -22,27 +22,15 @@
           <form action="#">
             <div class="input-box">
               <div class="input-field field">
-                <label for="fname">First Name</label>
+                <label for="name">Name</label>
                 <input
                   type="text"
-                  id="fname"
+                  id="name"
                   class="item"
-                  name="firstname"
+                  name="name"
                   placeholder="Your name.."
                 />
-                <div class="error-txt">First name can't be blank</div>
-              </div>
-
-              <div class="input-field field">
-                <label for="lname">Last Name</label>
-                <input
-                  type="text"
-                  id="lname"
-                  class="item"
-                  name="lastname"
-                  placeholder="Your last name.."
-                />
-                <div class="error-txt">Last name can't be blank</div>
+                <div class="error-txt">Name can't be blank</div>
               </div>
 
               <div class="input-field field">
@@ -54,31 +42,55 @@
                   name="email"
                   placeholder="YourEmail@gmail.com"
                 />
-                <div class="error-txt email">Email address can't be blank</div>
+                <div class="error-txt">Email address can't be blank</div>
               </div>
 
               <div class="input-field field">
-                <label for="subject">Subject Title</label>
+                <label for="phone">Phone number</label>
                 <input
                   type="text"
-                  id="subject"
+                  id="phone"
                   class="item"
-                  name="subject"
-                  placeholder="Subject"
+                  name="phone"
+                  placeholder="???-???-????"
                 />
-                <div class="error-txt">Subject title can't be blank</div>
+                <div class="error-txt">Phone number can't be blank</div>
+              </div>
+
+              <div class="input-field field">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  class="item"
+                  name="address"
+                  placeholder="Example St. City, State Zip"
+                />
+                <div class="error-txt">Address can't be blank</div>
               </div>
 
               <div class="textarea-field field">
-                <label for="Message">Message</label>
+                <label for="description">Job Description</label>
                 <textarea
-                  id="message"
+                  id="description"
                   class="item"
-                  name="Message"
-                  placeholder="Write your message here!"
+                  name="description"
+                  placeholder="Describe your job here!"
                   style="height: 200px"
                 ></textarea>
-                <div class="error-txt">Message can't be blank</div>
+                <div class="error-txt">Description can't be blank</div>
+              </div>
+
+              <div class="input-field field">
+                <label for="mulch">How many yards of mulch?</label>
+                <input
+                  type="text"
+                  id="mulch"
+                  class="item"
+                  name="mulch"
+                  placeholder="10 yards"
+                />
+                <div class="error-txt">Mulch amount can't be blank</div>
               </div>
             </div>
             <button type="submit">Send Message</button>
