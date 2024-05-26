@@ -122,4 +122,7 @@
     .SeanLinkPhoto{
         display: none;
     }
+    .SeanAbout{
+        justify-content: center;
+    }
 } 
