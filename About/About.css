@@ -14,6 +14,8 @@
     justify-content: center;
     justify-content: space-around;
     margin: 20px;
+    min-width: 350px;
+    
 
 }
 
@@ -112,9 +114,12 @@
 }
 
 
-/* @media (max-width: 600px) { 
+@media (max-width: 600px) { 
     .photo {
         flex-basis: 100%;
         max-width: 100%;
     }
-} */
+    .SeanLinkPhoto{
+        display: none;
+    }
+} 
