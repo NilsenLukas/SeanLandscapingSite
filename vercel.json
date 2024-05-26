@@ -1,47 +1,21 @@
 {
     "builds": [
-      {
-        "src": "About/**",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "Contact/**",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "Images/**",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "Nav/**",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.html",
-        "use": "@vercel/static"
-      }
+      { "src": "About/**", "use": "@vercel/static" },
+      { "src": "Contact/**", "use": "@vercel/static" },
+      { "src": "Images/**", "use": "@vercel/static" },
+      { "src": "Nav/**", "use": "@vercel/static" },
+      { "src": "*.html", "use": "@vercel/static" },
+      { "src": "*.css", "use": "@vercel/static" },
+      { "src": "*.js", "use": "@vercel/static" }
     ],
     "routes": [
-      {
-        "src": "/",
-        "dest": "/About/About.html"
-      },
-      {
-        "src": "/contact",
-        "dest": "/Contact/Contact.html"
-      },
-      {
-        "src": "/images/(.*)",
-        "dest": "/Images/$1"
-      },
-      {
-        "src": "/nav/(.*)",
-        "dest": "/Nav/$1"
-      },
-      {
-        "src": "/about",
-        "dest": "/About/About.html"
-      }
+      { "src": "/", "dest": "/About/About.html" },
+      { "src": "/contact", "dest": "/Contact/Contact.html" },
+      { "src": "/images/(.*)", "dest": "/Images/$1" },
+      { "src": "/nav/(.*)", "dest": "/Nav/$1" },
+      { "src": "/about", "dest": "/About/About.html" },
+      { "src": "/(.*).css", "dest": "/$1.css" },
+      { "src": "/(.*).js", "dest": "/$1.js" }
     ]
   }
   
