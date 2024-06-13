@@ -1,25 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-
-*{
+* {
     --color-outline: #041f27;
     font-family: "Poppins", sans-serif;
     color: var(--color-outline);
 }
 
-.AboutSeanContent{
+.AboutSeanContent {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
     justify-content: space-around;
     margin: 20px;
     min-width: 350px;
-    
-
 }
 
-.SeanAbout{
+.SeanAbout {
     flex: 1 1 45%;
     margin-left: auto;
     margin-right: auto;
@@ -28,14 +23,14 @@
     text-align: center;
 }
 
-.SeanPhoto{
+.SeanPhoto {
     flex: 1 1 45%;
     margin-left: auto;
     margin-right: auto;
     max-width: 45%;
 }
 
-.SeanLinkPhoto{
+.SeanLinkPhoto {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
@@ -55,24 +50,24 @@
 }
 
 .photo {
-    flex: 1 1 45%; /* Allows two images to sit side by side */
+    flex: 1 1 45%;
     margin: 10px;
     max-width: 45%;
     max-height: 20em;
     object-fit: cover;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for better image visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5%;
 }
 
-.FooterContent{
+.FooterContent {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
 
-.FooterContactMe{
+.FooterContactMe {
     margin-left: auto;
     margin-right: auto;
     max-width: 45%;
@@ -84,52 +79,69 @@
     font-size: 1em;
 }
 
-.AboutSeanContent, .SeanAbout, .SeanPhoto, .photo-section {
-    margin: 0 20px; /* Provides padding on smaller screens */
+.AboutSeanContent,
+.SeanAbout,
+.SeanPhoto,
+.photo-section {
+    margin: 0 20px;
 }
 
 /* Specific Media Query for Mobile Devices */
 @media (max-width: 600px) {
-    .AboutSeanContent, .SeanAbout, .SeanPhoto, .SeanLinkPhoto {
-        flex: 0 0 100%; /* Overrides the flex property to take full width */
-        max-width: 100%; /* Ensures each section uses the full width available */
-        margin: 10px 0; /* Adjusts margin for mobile layout */
+    .SeanAbout,
+    .SeanPhoto,
+    .SeanLinkPhoto {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 10px 0;
     }
 
-    .SeanAbout, .SeanPhoto img, .photo-container img {
-        width: 100%; /* Full width for images */
+    .SeanAbout,
+    .photo-container img {
+        width: 100%;
+    }
+
+    .SeanPhoto img {
+        width: 0%;
     }
 
     .photo-container {
-        flex-direction: column; /* Stacks images vertically */
+        flex-direction: column;
     }
 
     .photo {
-        max-width: 100%; /* Full width for individual photos */
+        max-width: 100%;
     }
 
-    h2, p {
-        padding: 0 20px; /* Adds horizontal padding for better text alignment */
+    h2,
+    p {
+        padding: 0 20px;
     }
-}
 
-
-@media (max-width: 600px) { 
     .photo {
         flex-basis: 100%;
         max-width: 100%;
     }
-    .SeanLinkPhoto{
+
+    .SeanLinkPhoto {
         display: none;
     }
-    .SeanAbout{
+
+    .SeanAbout {
         justify-content: center;
         flex: none;
-        max-width: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10%;
+        text-align: center;
     }
-    .AboutSeanContent{
+
+    .AboutSeanContent {
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         text-align: center;
         min-width: 200px;
     }
-} 
+}
